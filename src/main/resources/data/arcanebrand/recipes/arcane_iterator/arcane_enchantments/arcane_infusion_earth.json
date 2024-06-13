@@ -1,0 +1,16 @@
+{
+  "type": "wizards_reborn:arcane_iterator",
+  "arcane_enchantment": {
+    "arcane_enchantment": "arcanebrand:arcane_infusion_earth"
+  },
+  "wissen": 1000,
+  "experience": 3,
+  "ingredients": [
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    }
+  ]
+}
