@@ -68,6 +68,8 @@ public class ArcaneBrandMain
         CREATIVE_MODE_TABS.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        // Actually set up the arcane enchantments!
+        setupArcaneEnchantments();
 
     }
 
