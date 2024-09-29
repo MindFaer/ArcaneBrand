@@ -1,6 +1,6 @@
 package com.mindfaer.arcanebrand;
 
-import com.mindfaer.arcanebrand.common.arcaneenchantment.ArcaneInfusionEarth;
+import com.mindfaer.arcanebrand.common.arcaneenchantment.*;
 import com.mindfaer.arcanebrand.item.equipment.ArcaneBrandItem;
 import com.mindfaer.arcanebrand.item.equipment.CustomItemTier;
 import mod.maxbogomol.wizards_reborn.api.arcaneenchantment.ArcaneEnchantment;
@@ -30,13 +30,20 @@ public class ArcaneBrandMain
 
     //Arcane Enchantments
     public static ArcaneEnchantment ARCANE_INFUSION_EARTH = new ArcaneInfusionEarth(MODID +":arcane_infusion_earth", 1);
+    public static ArcaneEnchantment ARCANE_INFUSION_WATER = new ArcaneInfusionWater(MODID +":arcane_infusion_water", 1);
+    public static ArcaneEnchantment ARCANE_INFUSION_FIRE = new ArcaneInfusionFire(MODID +":arcane_infusion_fire", 1);
+    public static ArcaneEnchantment ARCANE_INFUSION_AIR = new ArcaneInfusionVoid(MODID +":arcane_infusion_air", 1);
+    public static ArcaneEnchantment ARCANE_INFUSION_VOID = new ArcaneInfusionAir(MODID +":arcane_infusion_void", 1);
 
     public static void setupArcaneEnchantments() {
         ArcaneEnchantments.register(ARCANE_INFUSION_EARTH);
+        ArcaneEnchantments.register(ARCANE_INFUSION_WATER);
+        ArcaneEnchantments.register(ARCANE_INFUSION_VOID);
+        ArcaneEnchantments.register(ARCANE_INFUSION_FIRE);
+        ArcaneEnchantments.register(ARCANE_INFUSION_AIR);
     }
 
     // Blocks and items
-
     public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
     public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
 
@@ -44,6 +51,7 @@ public class ArcaneBrandMain
     public static final RegistryObject<Item> ARCANE_BRAND = ITEMS.register("arcane_brand", () -> new ArcaneBrandItem(CustomItemTier.ARCANE_BRAND, 5, -2f, new Item.Properties()));
     public static final RegistryObject<Item> ARCANE_BRAND_SHEATH = ITEMS.register("arcane_brand_sheath", () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
 
+    // Creative Tab
     public static final RegistryObject<CreativeModeTab> ARCANEBRANDTAB = CREATIVE_MODE_TABS.register("arcane_brand", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> ARCANE_BRAND.get().getDefaultInstance())
@@ -57,7 +65,6 @@ public class ArcaneBrandMain
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
@@ -70,9 +77,7 @@ public class ArcaneBrandMain
         MinecraftForge.EVENT_BUS.register(this);
         // Actually set up the arcane enchantments!
         setupArcaneEnchantments();
-
     }
-
     private void commonSetup(final FMLCommonSetupEvent event)
     {
     }

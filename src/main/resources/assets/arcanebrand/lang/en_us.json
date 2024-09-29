@@ -3,5 +3,10 @@
 
   "item.arcanebrand.arcane_brand": "Arcane Brand",
 
-  "arcane_enchantment.arcanebrand.arcane_infusion_earth": "Arcane Infusion: Earth"
+  "arcane_enchantment.arcanebrand.arcane_infusion_earth": "Arcane Infusion: Earth",
+  "arcane_enchantment.arcanebrand.arcane_infusion_air": "Arcane Infusion: Air",
+  "arcane_enchantment.arcanebrand.arcane_infusion_fire": "Arcane Infusion: Fire",
+  "arcane_enchantment.arcanebrand.arcane_infusion_water": "Arcane Infusion: Water",
+  "arcane_enchantment.arcanebrand.arcane_infusion_void": "Arcane Infusion: Void"
+
 }
