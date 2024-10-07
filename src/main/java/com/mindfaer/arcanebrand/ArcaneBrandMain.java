@@ -5,7 +5,6 @@ import com.mindfaer.arcanebrand.item.equipment.ArcaneBrandItem;
 import com.mindfaer.arcanebrand.item.equipment.CustomItemTier;
 import mod.maxbogomol.wizards_reborn.api.arcaneenchantment.ArcaneEnchantment;
 import mod.maxbogomol.wizards_reborn.api.arcaneenchantment.ArcaneEnchantments;
-import mod.maxbogomol.wizards_reborn.WizardsReborn;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;

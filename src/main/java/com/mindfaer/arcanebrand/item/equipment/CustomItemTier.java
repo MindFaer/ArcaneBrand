@@ -1,5 +1,8 @@
 package com.mindfaer.arcanebrand.item.equipment;
 
+import net.minecraft.util.LazyLoadedValue;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 import mod.maxbogomol.wizards_reborn.WizardsReborn;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -9,7 +12,7 @@ import java.util.function.Supplier;
 
 public enum CustomItemTier implements Tier {
 
-    ARCANE_BRAND(3, 1450, 8f, 2f, 25, () -> Ingredient.of(WizardsReborn.ARCANE_GOLD_INGOT.get()));
+    ARCANE_BRAND(3, 450, 8f, 2f, 25, () -> Ingredient.of(WizardsReborn.ARCANE_GOLD_INGOT.get()));
 
     private final int harvestLevel;
     private final int maxUses;
@@ -19,7 +22,7 @@ public enum CustomItemTier implements Tier {
     private final LazyLoadedValue<Ingredient> repairMaterial;
 
     CustomItemTier(int harvestLevel, int maxUses, float efficiency,
-                   float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial) {
+                           float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial) {
         this.harvestLevel = harvestLevel;
         this.maxUses = maxUses;
         this.efficiency = efficiency;

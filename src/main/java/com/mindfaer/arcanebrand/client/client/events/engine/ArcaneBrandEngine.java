@@ -1,6 +1,5 @@
 package com.mindfaer.arcanebrand.client.client.events.engine;
 
-import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -21,6 +20,6 @@ public class ArcaneBrandEngine {
 
     @SubscribeEvent
     public static void registerRenderer(PatchedRenderersEvent.Add event) {
-        event.addItemRenderer((Item) ArcaneBrandMain.ARCANE_BRAND.get(), new RenderArcaneBrand());
+        event.addItemRenderer(ArcaneBrandMain.ARCANE_BRAND.get(), new RenderArcaneBrand());
     }
 }
